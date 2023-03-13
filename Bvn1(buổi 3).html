@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    </head>
+    <body>
+        <h1 id="heading">Hello World</h1>
+        <div id="parent">
+            <p id="text">Đây là dòng thứ 1</p>
+        </div>
+
+        <script>
+            // Câu 1.
+
+            const a = document.getElementById('text');
+            const b = document.getElementById('parent');
+            a.style.color='#777';
+            a.style.fontSize='2rem';
+            
+            let c = document.createElement('new');
+            c.innerText='Tôi có thể làm <em> bất cứ điều gì </em> tôi muốn với JavaScript.';
+            b.replaceChild(c,a);
+
+        
+        </script>
+    </body>

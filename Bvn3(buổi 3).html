@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    </head>
+    <body>
+        <h1 id="heading">Hello World</h1>
+        <ul id="list">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+            <li>Item 7</li>
+         </ul>
+
+        <script>
+            // Câu 3.
+
+
+            // 1.
+
+            let a = document.getElementById('list');
+            a.insertAdjacentHTML('beforeend','<li>Item 8</li>');
+            a.insertAdjacentHTML("beforeend",'<li>Item 9</li>');
+            a.insertAdjacentHTML("beforeend",'<li>Item 10</li>');
+
+            // 2.
+            
+            let b = document.querySelector('li');
+            b.style.color = 'red'; 
+            
+            // 3.
+
+            const c = document.querySelectorAll('li');
+            console.log(c);
+            for(let i = 0; i < c.length; i++){
+                c[2].style.background='blue';
+            }
+
+            // 4+5.
+
+            const d = document.querySelectorAll('li');            
+            for(let i = 0; i < c.length; i++){
+                const e = document.getElementById('list');
+                e.removeChild(d[3]);
+                let f = document.querySelector('#list li:nth-child(3)');
+                f.insertAdjacentHTML("afterend",'<li>nội dung bất kỳ</li>');
+
+            }
+            
+
+
+        </script>
+    </body>
