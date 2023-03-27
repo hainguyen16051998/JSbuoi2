@@ -2,7 +2,8 @@ import React, {useState} from "react"
 
 function UlLi  () {
     const [info, SetInfo] = useState('');
-    const [infos, SetInfos] = useState([])
+    const [infos, SetInfos] = useState([]);
+
 
     // Thêm thẻ <li> nội dung trong ô input
     const add = () => {
@@ -12,29 +13,23 @@ function UlLi  () {
 
     // Thêm nút remove
     const remove = () => {
-        const list = document.getElementById('list');
-        let c = list.lastElementChild;
-        if(c){
-            list.removeChild(c)
-        }
-        return;
+        const b = [...infos];
+        b.pop();
+        SetInfos(b);
     }
 
 
     // Thêm nủt "Hide"
     const hide = () => {
-        const b = document.getElementById('hide');
         const list = document.getElementById('list');
-        if(b.innerText == 'Hide'){
-            b.innerText = 'Show';
-
-        }else{
-            b.innerText="Hide";
-
-        }
-        list.classList.toggle('hide');
-    
-    }
+            if (list.style.display === 'none') {
+                list.style.display = 'block';
+                document.getElementById('hide').innerText = 'Hide';
+            } else {
+                list.style.display = 'none';
+                document.getElementById('hide').innerText = 'Show';
+            }       
+    };
 
     return (
         <div class="main-container">
